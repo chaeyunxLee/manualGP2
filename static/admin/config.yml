@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/img"  # 업로드된 이미지를 저장할 폴더
+public_folder: "/img"  # 이미지가 웹에서 접근할 수 있도록 경로 설정
+
+collections:
+  - name: "docs"  # 'docs'는 문서 파일이 저장될 폴더 이름
+    label: "Docs"
+    folder: "docs"  # Docusaurus의 기본 docs 폴더
+    create: true  # 새로운 문서를 만들 수 있도록 설정
+    slug: "{{slug}}"  # 문서 파일의 URL 슬러그
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }

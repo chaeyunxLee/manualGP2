@@ -1,6 +1,15 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import netlifyIdentity from 'netlify-identity-widget';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+netlifyIdentity.init();
+
+const login = () => netlifyIdentity.open();
+const logout = () => netlifyIdentity.logout();
+
 
 const FeatureList = [
   {
