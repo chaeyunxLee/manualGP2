@@ -1,6 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
+  repo: chaeyunxLee/manualGP2
+
+auth:
+  clientid: Ov23lifd30AEMcvKH4wm
+  client_secret: ${GITHUB_CLIENT_SECRET} # GitHub OAuth Client Secret (GitHub Actions에 저장된 secret 사용)
+    
+
 
 media_folder: "static/img"  # 업로드된 이미지를 저장할 폴더
 public_folder: "/img"  # 이미지가 웹에서 접근할 수 있도록 경로 설정
