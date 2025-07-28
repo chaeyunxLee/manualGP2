@@ -44,7 +44,11 @@
               fields: [
                 { label: '제목', name: 'title', widget: 'string' },
                 { label: '내용', name: 'body', widget: 'markdown' }
-              ]
+              ],
+                // 하위 폴더도 포함
+                nested: {
+                  depth: 10
+                }
             }]
           }
         });
