@@ -36,25 +36,34 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'ko',
-    locales: ['en','ko','ja','zh-CN'],
-       localeConfigs: {
-      en: {
-        label: 'English',
+    i18n: {
+      defaultLocale: 'ko',
+      locales: ['ko', 'en', 'ja','zh-CN'],
+    },
+      customFields: {
+      titles: {
+        ko: 'VRWARE 매뉴얼',
+        en: 'VRWARE Manual',
       },
-      ko: {
-        label: '한국어',
+      taglines: {
+        ko: '모든 솔루션들의 매뉴얼',
+        en: "Manual for all our solutions",
       },
-      ja: {
-        label: '日本語',
-      },
-      'zh-CN': {
-        label: ' 中文',
-      },
-    }
-  },
-
+      localeConfigs: {
+        en: {
+          label: 'English',
+        },
+        ko: {
+          label: '한국어',
+        },
+        ja: {
+          label: '日本語',
+        },
+        'zh-CN': {
+          label: ' 中文',
+        },
+      }
+    },
   presets: [
     [
       'classic',
@@ -95,7 +104,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'VRWARE Manual',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -111,6 +120,10 @@ const config = {
             sidebarId: 'metawareSidebar', label: 'METAWARE', position: 'left'},
           {
           type: 'localeDropdown', position: 'right'
+          },
+           {
+            type: 'search',
+            position: 'right',
           },
         ],
       },

@@ -1,18 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Netlify CMS</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/netlify-cms@latest/dist/cms.css" />
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@latest/dist/cms.js"></script>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-      window.addEventListener('DOMContentLoaded', function() {
-        CMS.init({ config: '/admin/config.yml' });
-      });
-    </script>
-  </body>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <style>
+    /* 초기 로딩 화면 */
+    #loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">CMS 로딩 중...</div>
+  
+  <!-- 안정적인 버전 사용 -->
+  <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // DOM이 완전히 로드된 후 실행
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+        
+        window.CMS.init({
+          config: {
+            backend: {
+              name: 'git-gateway',
+              branch: 'main'
+            },
+            media_folder: 'static/img',
+            public_folder: '/img',
+            collections: [{
+              name: 'docs',
+              label: '문서',
+              folder: 'docs',
+              create: true,
+              slug: '{{slug}}',
+              fields: [
+                { label: '제목', name: 'title', widget: 'string' },
+                { label: '내용', name: 'body', widget: 'markdown' }
+              ]
+            }]
+          }
+        });
+      }, 100); // 약간의 지연으로 DOM 안정화
+    });
+  </script>
+</body>
 </html>
