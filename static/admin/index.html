@@ -40,9 +40,25 @@
               label: '문서',
               folder: 'docs',
               create: true,
+              delete: true,
               slug: '{{slug}}',
+              extension: 'md',
+              format: 'frontmatter',
+              // 리스트에서 보여줄 정보 설정
+              summary: '{{title}} - {{filename}}',
+              sortable_fields: ['title', 'date'],
+              view_filters: [
+                {
+                  label: '제목으로 필터',
+                  field: 'title',
+                  pattern: 'front matter post'
+                }
+              ],
               fields: [
                 { label: '제목', name: 'title', widget: 'string' },
+                { label: '사이드바 순서', name: 'sidebar_position', widget: 'number', required: false },
+                { label: '사이드바 라벨', name: 'sidebar_label', widget: 'string', required: false },
+                { label: '설명', name: 'description', widget: 'string', required: false },
                 { label: '내용', name: 'body', widget: 'markdown' }
               ],
                 // 하위 폴더도 포함

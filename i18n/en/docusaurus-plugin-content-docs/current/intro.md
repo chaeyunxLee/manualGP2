@@ -1,9 +1,9 @@
 ---
-id: 'intro'
+title: '튜토리얼 인트로 - en'
 sidebar_position: 1
 ---
 
-# English Manual
+# Tutorial Intro -en
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

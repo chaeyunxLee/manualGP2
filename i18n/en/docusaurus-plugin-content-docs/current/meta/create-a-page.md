@@ -1,4 +1,5 @@
 ---
+title: METAWARE Manual -en
 sidebar_position: 1
 ---
 

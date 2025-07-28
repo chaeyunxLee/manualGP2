@@ -1,4 +1,5 @@
 ---
+title: 'METAWARE 매뉴얼 - ko'
 sidebar_position: 1
 ---
 

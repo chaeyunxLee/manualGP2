@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: 'intro'
+title: '튜토리얼 인트로 - ko'
 ---
 
 # Tutorial 인트로
