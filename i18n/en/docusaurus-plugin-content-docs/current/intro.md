@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
 id: 'intro'
+sidebar_position: 1
 ---
 
-# Tutorial 인트로
+# English Manual
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

@@ -2,7 +2,8 @@
 sidebar_position: 1
 ---
 
-# 페이지 만들기
+# METAWARE 매뉴얼
+
 Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 
 - `src/pages/index.js` → `localhost:3000/`

@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'VRWARE Manual',
+  tagline: 'VRWARE Manual',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -37,8 +37,22 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['en','ko','ja','zh-CN'],
+       localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      ko: {
+        label: '한국어',
+      },
+      ja: {
+        label: '日本語',
+      },
+      'zh-CN': {
+        label: ' 中文',
+      },
+    }
   },
 
   presets: [
@@ -51,7 +65,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/chaeyunxLee/manualGP2/edit/master',
         },
         blog: {
           showReadingTime: true,
@@ -91,13 +105,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'VRWARE',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {type: 'docSidebar',
+            sidebarId: 'metawareSidebar', label: 'METAWARE', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+          type: 'localeDropdown', position: 'right'
           },
         ],
       },
