@@ -2,7 +2,7 @@
 title: 튜토리얼 인트로 - ko
 sidebar_position: 1
 ---
-# Tutorial 인트로-수정1
+# Tutorial 인트로
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
