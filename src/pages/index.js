@@ -8,15 +8,15 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const { siteConfig, i18n } = useDocusaurusContext();
-  const { currentLocale } = i18n;
+  const { siteConfig } = useDocusaurusContext();
+  // const { currentLocale } = i18n;
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.customFields.titles[currentLocale]}
+          {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.customFields.taglines[currentLocale]}</p>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

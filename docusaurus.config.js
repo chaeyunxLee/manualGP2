@@ -60,7 +60,7 @@ const config = {
           label: '日本語',
         },
         'zh-CN': {
-          label: ' 中文',
+          label: '中文',
         },
       }
     },
@@ -97,7 +97,17 @@ const config = {
       }),
     ],
   ],
-
+ scripts: [
+    {
+      src: 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+      async: true,
+    },
+  ],
+  
+  // 커스텀 스크립트 추가
+  clientModules: [
+    require.resolve('./src/googleTranslate.js'),
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -120,6 +130,11 @@ const config = {
             sidebarId: 'metawareSidebar', label: 'METAWARE', position: 'left'},
           {
           type: 'localeDropdown', position: 'right'
+          },
+           {
+            type: 'html',
+            position: 'right',
+            value: '<div id="google_translate_element"></div>',
           },
            {
             type: 'search',

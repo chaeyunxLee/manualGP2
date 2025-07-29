@@ -1,0 +1,48 @@
+/* Google Translate 위젯 스타일 커스터마이징 */
+:global(.goog-te-combo) {
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  color: var(--ifm-font-color-base);
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+:global(.goog-te-combo):focus {
+  border-color: var(--ifm-color-primary);
+  outline: none;
+}
+
+/* 다크모드 지원 */
+[data-theme='dark'] :global(.goog-te-combo) {
+  background-color: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-font-color-base);
+}
+
+/* Google 번역 배너 숨기기 (선택사항) */
+:global(.goog-te-banner-frame) {
+  display: none !important;
+}
+
+:global(.goog-te-menu-frame) {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+}
+
+/* 상단 Google 번역 바 숨기기 */
+:global(#\:1\.container) {
+  display: inline-block !important;
+}
+
+:global(.goog-te-gadget) {
+  color: inline-block !important;
+}
+
+:global(.goog-te-gadget > span > a) {
+  display: inline-block !important;
+}
+
+:global(.goog-te-gadget .goog-te-combo) {
+  color: var(--ifm-font-color-base) !important;
+}
