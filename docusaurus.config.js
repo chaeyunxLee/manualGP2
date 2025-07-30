@@ -131,7 +131,7 @@ const config = {
           {
           type: 'localeDropdown', position: 'right'
           },
-           {
+          {
             type: 'html',
             position: 'right',
             value: '<div id="google_translate_element"></div>',
