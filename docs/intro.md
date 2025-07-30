@@ -2,19 +2,19 @@
 title: 튜토리얼 인트로 - ko
 sidebar_position: 1
 ---
-# Tutorial 인트로
+# 튜토리얼 인트로
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**도큐사우루스를 5분 안에!** 알아볼 수 있어요.
 
-## Getting Started
+## 첫 시작
 
-Get started by **creating a new site**.
+**새로운 사이트 만들기**부터 시작해요.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+또는 **당장 도큐사우루스를 사용**해볼 수 있는데, 이 링크로 가능해요. **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
+### 시작을 위해 무엇이 필요할까요?
 
-* [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
+* [Node.js](https://nodejs.org/en/download/) version 18.0 또는 그 이상의 버전이 필요해요.:
 
   * When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 

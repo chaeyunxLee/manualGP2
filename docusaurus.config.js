@@ -128,9 +128,9 @@ const config = {
           },
           {type: 'docSidebar',
             sidebarId: 'metawareSidebar', label: 'METAWARE', position: 'left'},
-          {
-          type: 'localeDropdown', position: 'right'
-          },
+          // {
+          // type: 'localeDropdown', position: 'right'
+          // },
           {
             type: 'html',
             position: 'right',
